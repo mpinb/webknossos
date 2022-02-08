@@ -31,6 +31,7 @@ jobs:
       - name: Install dependencies
         run: | 
           sed -i "/cluster_tools = .*/c\cluster-tools = {git = 'https://github.com/research-center-caesar/cluster-tools.git', rev = 'main'}" pyproject.toml
+          cat pyproject.toml
           poetry install --no-interaction --no-root
       - name: Commit & push changes
         run: |
