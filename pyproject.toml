@@ -14,7 +14,7 @@ python = "^3.7,>=3.7.1"
 attrs = "^21.1.0"
 boltons = "~21.0.0"
 cattrs = "1.7.1"
-cluster-tools = {git = 'https://github.com/research-center-caesar/cluster-tools.git', rev = 'main'}
+cluster_tools = {git = 'https://github.com/research-center-caesar/cluster-tools.git', rev = 'main'}
 httpx = ">=0.15.4,<0.19.0"
 loxun = "^2.0"
 networkx = "^2.6.2"

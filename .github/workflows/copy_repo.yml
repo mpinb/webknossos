@@ -24,13 +24,16 @@ jobs:
             git clone https://github.com/scalableminds/webknossos-libs.git external/webknossos-libs
             cp -r external/webknossos-libs/webknossos/* ./
             rm -rf external
-            sed -i "/cluster_tools = .*/c\cluster-tools = {git = 'https://github.com/research-center-caesar/cluster-tools.git', rev = 'main'}" pyproject.toml
+            sed -i "/cluster_tools = .*/c\cluster_tools = {git = 'https://github.com/research-center-caesar/cluster-tools.git', rev = 'main'}" pyproject.toml
             git status
           fi
       - name: Install and configure Poetry
-        uses: snok/install-poetry@v
+        uses: snok/install-poetry@v1
       - name: Install dependencies
-        run: poetry install --no-interaction --no-root
+        run: | 
+          sed -i "/cluster_tools = .*/c\cluster_tools = {git = 'https://github.com/research-center-caesar/cluster-tools.git', rev = 'main'}" pyproject.toml
+          rm poetry.lock
+          poetry install --no-interaction --no-root
       - name: Commit & push changes
         run: |
           git status
