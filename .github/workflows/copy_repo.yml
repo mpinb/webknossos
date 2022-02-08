@@ -20,7 +20,7 @@ jobs:
         run: |
           if ! git diff --exit-code .hash &> /dev/null; then
             hash=$(cat .hash)
-            echo New commit ${hash} available!"
+            echo New commit ${hash} available!
             mkdir external
             git clone https://github.com/scalableminds/webknossos-libs.git external/webknossos-libs
             cp -r external/webknossos-libs/webknossos ./
