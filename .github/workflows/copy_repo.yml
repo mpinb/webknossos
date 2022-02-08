@@ -28,7 +28,7 @@ jobs:
             git status
           fi
       - name: Install and configure Poetry
-      - uses: snok/install-poetry@v
+        uses: snok/install-poetry@v
       - name: Install dependencies
         run: poetry install --no-interaction --no-root
       - name: Commit & push changes
