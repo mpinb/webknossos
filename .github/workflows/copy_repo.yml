@@ -1,11 +1,10 @@
 # Clone public repo if new commits exist
 
-name: Mirror repo
+name: Check for upstream updates
 
 on:
-  #schedule:
-    # * is a special character in YAML so you have to quote this string
-    # - cron:  '0 12 * * *'
+  schedule:
+     - cron:  '0 0 * * 1-5'
   workflow_dispatch:
 
 jobs:
@@ -14,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Get commit message from webknossos-libs repo
-        # Save commit hash in .hash (from: https://serverfault.com/a/153893)
+        # Save remote commit hash in file '.hash' (from: https://serverfault.com/a/153893)
         run: echo `git ls-remote https://github.com/scalableminds/webknossos-libs.git HEAD | awk '{ print $1}'` > .hash
-      - name: Commit if changes
+      - name: Clone upstream repository if new commit exists
         run: |
           if ! git diff --exit-code .hash &> /dev/null; then
             hash=$(cat .hash)
