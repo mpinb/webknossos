@@ -1,0 +1,23 @@
+# Clone public repo if new commits exist
+
+name: Mirror repo
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get commit message from webknossos-libs repo
+        # Save commit hash in .hash (from: https://serverfault.com/a/153893)
+        run echo `git ls-remote https://github.com/scalableminds/webknossos-libs.git HEAD | awk '{ print $1}'` > .hash
+      - name: Commit if changes
+        run: |
+          if ! git diff --exit-code .hash &> /dev/null; then
+            mkdir external
+            git clone https://github.com/scalableminds/webknossos-libs.git external/webknossos-libs
+            cp -r external/webknossos-libs/webknossos ./
+            rm -rf external
+            git config --global user.name 'Github Action'
+            git config --global user.email 'erjel@users.noreply.github.com'
+            git commit -am "New commit <commit hash>"
+          fi
