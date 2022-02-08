@@ -24,6 +24,7 @@ jobs:
             git clone https://github.com/scalableminds/webknossos-libs.git external/webknossos-libs
             cp -r external/webknossos-libs/webknossos/* ./
             rm -rf external
+            sed -i "/cluster_tools = .*/c\cluster-tools = {git = 'https://github.com/research-center-caesar/cluster-tools.git', rev = 'main'}" pyproject.toml
             git status
             git config --global user.name 'Github Action'
             git config --global user.email 'erjel@users.noreply.github.com'
