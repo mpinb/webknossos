@@ -1,0 +1,35 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - localhost:9000
+      user-agent:
+      - python-httpx/0.18.2
+    method: GET
+    uri: http://localhost:9000/api/buildinfo
+  response:
+    content: '{"webknossos":{"name":"webknossos","ciTag":"","commitHash":"9e5cf915409dd896239d2cd03988924a4405c4b3","ciBuild":"16745","scalaVersion":"2.12.12","version":"16745","sbtVersion":"1.4.1","datastoreApiVersion":"1.0","commitDate":"Tue
+      Feb 1 11:20:15 2022 +0100"},"webknossos-wrap":{"builtAtMillis":"1640035836569","name":"webknossos-wrap","commitHash":"8b842648702f469a3ffd90dc8a68c4310e64b351","scalaVersion":"2.12.7","version":"1.1.15","sbtVersion":"1.4.1","builtAtString":"2021-12-20
+      21:30:36.569"},"schemaVersion":81,"token":"xxxsecrettokenxxx","localDataStoreEnabled":true,"localTracingStoreEnabled":true}'
+    headers:
+      content-length:
+      - '610'
+      content-type:
+      - application/json
+      date: Mon, 01 Jan 2000 00:00:00 GMT
+      referrer-policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      x-permitted-cross-domain-policies:
+      - master-only
+      x-xss-protection:
+      - 1; mode=block
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
