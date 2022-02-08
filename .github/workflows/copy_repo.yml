@@ -19,10 +19,13 @@ jobs:
       - name: Commit if changes
         run: |
           if ! git diff --exit-code .hash &> /dev/null; then
+            echo "New commit available"
             mkdir external
             git clone https://github.com/scalableminds/webknossos-libs.git external/webknossos-libs
+            ls external/webknossos-libs
             cp -r external/webknossos-libs/webknossos ./
             rm -rf external
+            git status
             git config --global user.name 'Github Action'
             git config --global user.email 'erjel@users.noreply.github.com'
             git commit -am "New commit <commit hash>"
