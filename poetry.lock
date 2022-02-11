@@ -190,7 +190,7 @@ cloudpickle = "^2.0.0"
 type = "git"
 url = 'https://github.com/research-center-caesar/cluster-tools.git'
 reference = 'main'
-resolved_reference = "b11b54e999bccfabf510084fd5afd7d772d18bc1"
+resolved_reference = "a1aae551bb2908be8021713a782457e16cdcb289"
 
 [[package]]
 name = "colorama"
