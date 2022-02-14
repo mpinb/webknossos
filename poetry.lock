@@ -149,7 +149,7 @@ pycparser = "*"
 
 [[package]]
 name = "charset-normalizer"
-version = "2.0.11"
+version = "2.0.12"
 description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
 category = "dev"
 optional = false
@@ -190,7 +190,7 @@ cloudpickle = "^2.0.0"
 type = "git"
 url = 'https://github.com/research-center-caesar/cluster-tools.git'
 reference = 'main'
-resolved_reference = "a1aae551bb2908be8021713a782457e16cdcb289"
+resolved_reference = "110bf0b2076523a7cb63946f31d0ad0ad7a0e4c1"
 
 [[package]]
 name = "colorama"
@@ -226,6 +226,17 @@ description = "Get the currently executing AST node of a frame, and other inform
 category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "fastremap"
+version = "1.12.2"
+description = "Remap, mask, renumber, unique, and in-place transposition of 3D labeled images. Point cloud too."
+category = "dev"
+optional = false
+python-versions = "~=3.6"
+
+[package.dependencies]
+numpy = "*"
 
 [[package]]
 name = "fonttools"
@@ -292,7 +303,7 @@ http2 = ["h2 (>=3.0.0,<4.0.0)"]
 
 [[package]]
 name = "hypothesis"
-version = "6.36.1"
+version = "6.36.2"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -1204,7 +1215,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7,>=3.7.1"
-content-hash = "b904dbe6b97ec053b062548bd8f63e4ae92508c054567ad5cf09fab156351759"
+content-hash = "a2cced32ee450e53777c331fd1bf0cdb1ca4f20172f46548f2151c8b7f57f4b5"
 
 [metadata.files]
 anyio = [
@@ -1303,8 +1314,8 @@ cffi = [
     {file = "cffi-1.15.0.tar.gz", hash = "sha256:920f0d66a896c2d99f0adbb391f990a84091179542c205fa53ce5787aff87954"},
 ]
 charset-normalizer = [
-    {file = "charset-normalizer-2.0.11.tar.gz", hash = "sha256:98398a9d69ee80548c762ba991a4728bfc3836768ed226b3945908d1a688371c"},
-    {file = "charset_normalizer-2.0.11-py3-none-any.whl", hash = "sha256:2842d8f5e82a1f6aa437380934d5e1cd4fcf2003b06fed6940769c164a480a45"},
+    {file = "charset-normalizer-2.0.12.tar.gz", hash = "sha256:2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"},
+    {file = "charset_normalizer-2.0.12-py3-none-any.whl", hash = "sha256:6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df"},
 ]
 click = [
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
@@ -1331,6 +1342,34 @@ executing = [
     {file = "executing-0.8.2-py2.py3-none-any.whl", hash = "sha256:32fc6077b103bd19e6494a72682d66d5763cf20a106d5aa7c5ccbea4e47b0df7"},
     {file = "executing-0.8.2.tar.gz", hash = "sha256:c23bf42e9a7b9b212f185b1b2c3c91feb895963378887bb10e64a2e612ec0023"},
 ]
+fastremap = [
+    {file = "fastremap-1.12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:afac212df01e2c2e21824ad278e1142e250c0cbacace17cae2d7790f6968dd06"},
+    {file = "fastremap-1.12.2-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:e822d6fdcac5cd5f8ea910c1ebd98d757dc86ab12fa4b79c48887133f9937854"},
+    {file = "fastremap-1.12.2-cp36-cp36m-manylinux2010_i686.whl", hash = "sha256:c3df82935717f32caad8e9fd94c3d969e7c0a5ea553500eaf012e64903548fc7"},
+    {file = "fastremap-1.12.2-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:d101b0ada54aa3d70dc10aebcd0c054c69ab5f76e35779366adb940eb70f00eb"},
+    {file = "fastremap-1.12.2-cp36-cp36m-win32.whl", hash = "sha256:7163fcdcf4bc1231738ebcc1d1123200cc8d0269ba2f82dad43134ed7bca4a5b"},
+    {file = "fastremap-1.12.2-cp36-cp36m-win_amd64.whl", hash = "sha256:be89c38ab7b6013e5c85b62f5b1ec01fe5fffef9cbe40074c6d2907de858d803"},
+    {file = "fastremap-1.12.2-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:b10cfeabe2e0e05f9d1c3de5ca5bafff38daa63907aa2c2ea90cff5b84f780b4"},
+    {file = "fastremap-1.12.2-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:1bb5c82592ef89fc37b0b90768e46f4b66411616aabe956e208c577605956f7b"},
+    {file = "fastremap-1.12.2-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:4a7b65816dc9a8a0429a81cb3f6c1e1a11e032f464e4608cead62a4f3a3f1aa8"},
+    {file = "fastremap-1.12.2-cp37-cp37m-win32.whl", hash = "sha256:6abf341ebfcfc9f1fa743e6fbf9831d9934dc9fc23864fbb67e5fa386c695da5"},
+    {file = "fastremap-1.12.2-cp37-cp37m-win_amd64.whl", hash = "sha256:15260a8e6da342f7764fd1a96248f451a7b876f6c1e43e25420f231f635e0206"},
+    {file = "fastremap-1.12.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:1fff7a7ae1d414be60d6165ee50b4540f3d2c56f7e00725c117c0101f24a95f8"},
+    {file = "fastremap-1.12.2-cp38-cp38-manylinux2010_i686.whl", hash = "sha256:7ff69e1eb1590504a95b8c6e94e9d03503241b36a8f96b07869c3be2055e4758"},
+    {file = "fastremap-1.12.2-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:1ce528d646dd75c9b10b6470c74599371d01a4d5e22b3ba1e4dd10eee8e51784"},
+    {file = "fastremap-1.12.2-cp38-cp38-win32.whl", hash = "sha256:d35203e61693b38e5102ea6c7d50088f0b0e4fbe5126853c1cca320e4f428673"},
+    {file = "fastremap-1.12.2-cp38-cp38-win_amd64.whl", hash = "sha256:9eb1d50efe6333cba1f711962cf72afd244003f7fcd22b4a02e7b81d9f5de42d"},
+    {file = "fastremap-1.12.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:93f2fcc0ba666514038aca3173625407da53cd7a0fd94602f6e628ef85e0ad79"},
+    {file = "fastremap-1.12.2-cp39-cp39-manylinux2010_i686.whl", hash = "sha256:c23e1f9a68a2cfea4bedf5e25d38f5815b19872f705bc34386bc0abc32a30014"},
+    {file = "fastremap-1.12.2-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:dd88b38db6ae4f012ea2fc81d29fa7f9c039afd13a67694280423aad3fbdc796"},
+    {file = "fastremap-1.12.2-cp39-cp39-win32.whl", hash = "sha256:84e2b93213cab92ff5be3fdd03c56d4edfc4662c957291936c54f31695a57d95"},
+    {file = "fastremap-1.12.2-cp39-cp39-win_amd64.whl", hash = "sha256:1159b3f7ac25d7b8152b194d32c8f78cede03bdca994f6a0e5d5d3dd9f37d516"},
+    {file = "fastremap-1.12.2-pp36-pypy36_pp73-manylinux2010_x86_64.whl", hash = "sha256:53422d2d5c511d939f2c061237bde2093a4f6f17591e907bc3e9483df1f51e0c"},
+    {file = "fastremap-1.12.2-pp36-pypy36_pp73-win32.whl", hash = "sha256:09997b95a762d7e1e063222f2745fcaa2768ed2a34949b7c7b3b8677543eaea6"},
+    {file = "fastremap-1.12.2-pp37-pypy37_pp73-manylinux2010_x86_64.whl", hash = "sha256:02447ce47dda3ac1aa8062fc888c7f77f5ad8d8ba96a61e6d79c746bf17ebabb"},
+    {file = "fastremap-1.12.2-pp37-pypy37_pp73-win32.whl", hash = "sha256:5fefd0062d046a775bd1855d45ba8190edb1db80ca4e35ec447bad664328a13c"},
+    {file = "fastremap-1.12.2.tar.gz", hash = "sha256:153cb48c5c2bd4dc9ffb8a859400bb04fe0a90f03c56aaee777f15d98d722f40"},
+]
 fonttools = [
     {file = "fonttools-4.29.1-py3-none-any.whl", hash = "sha256:1933415e0fbdf068815cb1baaa1f159e17830215f7e8624e5731122761627557"},
     {file = "fonttools-4.29.1.zip", hash = "sha256:2b18a172120e32128a80efee04cff487d5d140fe7d817deb648b2eee023a40e4"},
@@ -1348,8 +1387,8 @@ httpx = [
     {file = "httpx-0.18.2.tar.gz", hash = "sha256:9f99c15d33642d38bce8405df088c1c4cfd940284b4290cacbfb02e64f4877c6"},
 ]
 hypothesis = [
-    {file = "hypothesis-6.36.1-py3-none-any.whl", hash = "sha256:886342c291e3e592f26889f25b33aac78c6af62c736451f7cdad0a06ffa27325"},
-    {file = "hypothesis-6.36.1.tar.gz", hash = "sha256:46cbee9d7aed822149af75ec63d5f86cd1042df69b2e8eae17b26a56a4dda781"},
+    {file = "hypothesis-6.36.2-py3-none-any.whl", hash = "sha256:7789664e0b487f6553492500738d6ed29ee1af143857d605b296d112154a4057"},
+    {file = "hypothesis-6.36.2.tar.gz", hash = "sha256:7202ea05759f591adf6c1887edbd4d53c049821284f630c5ec8ec3f3f57fd46b"},
 ]
 icecream = [
     {file = "icecream-2.1.1-py2.py3-none-any.whl", hash = "sha256:adc1c48f5a4f83b2171c774a35142f217d317a84fca8cdf3fc65aa1321ff26b6"},
