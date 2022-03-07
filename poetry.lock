@@ -199,7 +199,7 @@ kubernetes = "^21.7.0"
 type = "git"
 url = 'https://github.com/research-center-caesar/cluster-tools.git'
 reference = 'main'
-resolved_reference = "39d9b602477ac4c22c2a2cfc2245b15839524f35"
+resolved_reference = "50690b6b0bafe286c97a2a97baf5dac0f8bfbbcc"
 
 [[package]]
 name = "colorama"
