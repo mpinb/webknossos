@@ -2,6 +2,9 @@
 
 All notable changes to the webknossos python library are documented in this file.
 
+Please see the [Stability Policy](./stability_policy.md) for details about the version schema
+and compatibility implications.
+
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/) `MAJOR.MINOR.PATCH`.
 For upgrade instructions, please check the respective *Breaking Changes* sections.
@@ -14,6 +17,9 @@ For upgrade instructions, please check the respective *Breaking Changes* section
 ### Added
 
 ### Changed
+- Dataset: Moved the deprecation warning from `get_color_layers()` to the actually deprecated method `get_color_layer()`.
+  [#635](https://github.com/scalableminds/webknossos-libs/pull/635)
+- Inconsistent writes to datasets properties (e.g., caused due to multiprocessing) are detected automatically. The warning can be escalated to an exception with `warnings.filterwarnings("error", module="webknossos", message=r"\[WARNING\]")`. [#633](https://github.com/scalableminds/webknossos-libs/pull/633)
 
 ### Fixed
 
