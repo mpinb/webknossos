@@ -1,5 +1,4 @@
 import itertools
-import warnings
 from os import PathLike
 from pathlib import Path
 from typing import Iterator, Optional, Set, Tuple, Union
@@ -7,11 +6,12 @@ from typing import Iterator, Optional, Set, Tuple, Union
 import attr
 from boltons.strutils import unit_len
 
+from webknossos.utils import warn_deprecated
+
 from .graph import Graph
 from .group import Group
 
 Vector3 = Tuple[float, float, float]
-IntVector6 = Tuple[int, int, int, int, int, int]
 
 GroupOrGraph = Union[Group, Graph]
 
@@ -32,6 +32,7 @@ class Skeleton(Group):
     # from Group parent to support mypy:
     _enforced_id: Optional[int] = attr.field(default=None, eq=False, repr=False)
     name: str = attr.field(default="Root", init=False, eq=False, repr=False)
+
     """Should not be used with `Skeleton`, this attribute is only useful for sub-groups. Set to `Root`."""
     _children: Set[GroupOrGraph] = attr.ib(
         factory=set,
@@ -67,16 +68,12 @@ class Skeleton(Group):
     @staticmethod
     def from_path(file_path: Union[PathLike, str]) -> "Skeleton":
         """Deprecated."""
-        warnings.warn(
-            "[DEPRECATION] Skeleton.from_path is deprecated, please use Skeleton.load instead."
-        )
+        warn_deprecated("Skeleton.from_path", "Skeleton.load")
         return Skeleton.load(file_path)
 
     def write(self, out_path: PathLike) -> None:
         """Deprecated."""
-        warnings.warn(
-            "[DEPRECATION] skeleton.write is deprecated, please use skeleton.save instead."
-        )
+        warn_deprecated("Skeleton.write", "skeleton.save")
         self.save(out_path)
 
     def __hash__(self) -> int:
