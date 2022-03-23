@@ -207,7 +207,7 @@ kubernetes = "^23.3.0"
 type = "git"
 url = 'https://github.com/research-center-caesar/cluster-tools.git'
 reference = 'main'
-resolved_reference = "927fb59e503f676838421a27619705f31539ba40"
+resolved_reference = "38f411eb0afbf78de9ff409fa3a42e481d04edd3"
 
 [[package]]
 name = "colorama"
@@ -265,7 +265,7 @@ numpy = "*"
 
 [[package]]
 name = "fonttools"
-version = "4.31.1"
+version = "4.31.2"
 description = "Tools to manipulate font files"
 category = "main"
 optional = false
@@ -1553,8 +1553,8 @@ fastremap = [
     {file = "fastremap-1.12.2.tar.gz", hash = "sha256:153cb48c5c2bd4dc9ffb8a859400bb04fe0a90f03c56aaee777f15d98d722f40"},
 ]
 fonttools = [
-    {file = "fonttools-4.31.1-py3-none-any.whl", hash = "sha256:2b288eae806800668cb5cdf52a37b5ac701c5adda2dd5c88b685581ce3385285"},
-    {file = "fonttools-4.31.1.zip", hash = "sha256:f8b35ed9ba189710994cec2c86b8eb5f0c49336698575e439a0d5671d3ca1ace"},
+    {file = "fonttools-4.31.2-py3-none-any.whl", hash = "sha256:2df636a3f402ef14593c6811dac0609563b8c374bd7850e76919eb51ea205426"},
+    {file = "fonttools-4.31.2.zip", hash = "sha256:236b29aee6b113e8f7bee28779c1230a86ad2aac9a74a31b0aedf57e7dfb62a4"},
 ]
 google-auth = [
     {file = "google-auth-2.6.2.tar.gz", hash = "sha256:60d449f8142c742db760f4c0be39121bc8d9be855555d784c252deaca1ced3f5"},
