@@ -424,7 +424,7 @@ tqdm = ["tqdm"]
 
 [[package]]
 name = "google-auth"
-version = "2.6.4"
+version = "2.6.5"
 description = "Google Authentication Library"
 category = "main"
 optional = false
@@ -1904,8 +1904,8 @@ fsspec = [
     {file = "fsspec-2022.3.0.tar.gz", hash = "sha256:fd582cc4aa0db5968bad9317cae513450eddd08b2193c4428d9349265a995523"},
 ]
 google-auth = [
-    {file = "google-auth-2.6.4.tar.gz", hash = "sha256:1a8c2c70c070b72fe038e2eb20072e5b4f0fd8ca1875e8fafe7f71b689a8d572"},
-    {file = "google_auth-2.6.4-py2.py3-none-any.whl", hash = "sha256:4dacb91d8a15b7755fc08688576481bd9c37cfac9842289469cf000d557f8962"},
+    {file = "google-auth-2.6.5.tar.gz", hash = "sha256:04e224f241c0566477bb35a8a93be8c635210de743bde454d49393cfb605266d"},
+    {file = "google_auth-2.6.5-py2.py3-none-any.whl", hash = "sha256:9a88ee548f6fd49467e2e443dfbfe10344e5a270629a137a3a0b3437ec6b02a6"},
 ]
 h11 = [
     {file = "h11-0.12.0-py3-none-any.whl", hash = "sha256:36a3cb8c0a032f56e2da7084577878a035d3b61d104230d4bd49c0c6b555a9c6"},
