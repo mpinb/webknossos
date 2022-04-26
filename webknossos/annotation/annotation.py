@@ -218,7 +218,7 @@ class Annotation:
         """
         * `annotation_id_or_url` may be an annotation id or a full URL to an annotation, e.g.
           `https://webknossos.org/annotations/Explorational/6114d9410100009f0096c640`
-        * `annotation_type` must be supplied iff an annotation id was used in the previous argument
+        * `annotation_type` must be supplied if and only if an annotation id was used in the previous argument
         * `webknossos_url` may be supplied if an annotation id was used
           and allows to specifiy in which webknossos instance to search for the annotation.
           It defaults to the url from your current `webknossos_context`, using https://webknossos.org as a fallback.
@@ -250,7 +250,7 @@ class Annotation:
         annotation_type = AnnotationType(annotation_type)
         assert (
             annotation_type not in _COMPOUND_ANNOTATION_TYPES
-        ), f"Currently compund annotation types are not supported, got {annotation_type}"
+        ), f"Currently compound annotation types are not supported, got {annotation_type}"
 
         if webknossos_url is not None and webknossos_url != _get_context().url:
             warnings.warn(
